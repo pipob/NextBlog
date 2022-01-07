@@ -38,7 +38,7 @@
 }
 
 
-.animate-right {
+.animation-right {
   animation: fade-in-right 0.5s ease-out;
 }
 
@@ -50,5 +50,20 @@
   to {
     right: 0;
     opacity: 1;
+  }
+}
+
+
+.truncate-m {  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+}
+
+@media (min-width: 640px) {
+  .truncate-m { 
+    -webkit-line-clamp: 3;
   }
 }

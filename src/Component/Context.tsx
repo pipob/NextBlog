@@ -8,10 +8,17 @@ export const themes = {
        textColor: 'text-gray-700',
        borderColor: 'border-gray-600'
      },
-     body: {
-       backgroundColor: 'bg-gray-100', 
-       backgroundTextColor: 'bg-white',
+     carousel: {
+       backgroundColor: 'bg-white',
        textColor: 'text-black',
+     },
+     body: {
+      backgroundColor: 'bg-gray-100', 
+      textColor: 'text-gray-900',
+     },
+     content: {
+      backgroundColor: 'bg-gray-200', 
+      textColor: 'text-black',
      }
    }, 
    dark: { 
@@ -21,10 +28,17 @@ export const themes = {
        textColor: 'text-gray-200',
        borderColor: 'border-gray-400' 
      },
+     carousel: {       
+       backgroundColor: 'bg-black',
+       textColor: 'text-white',
+     },
      body: {
        backgroundColor: 'bg-gray-800', 
-       backgroundTextColor: 'bg-black',
-       textColor: 'text-white',
+       textColor: 'text-gray-100',
+     },
+     content: {
+      backgroundColor: 'bg-gray-900', 
+      textColor: 'text-white',
      }
    }
  }
