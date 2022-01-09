@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import ThemeContext from "./Context";
 
 const marketInfo = [
    { symbol: 'SET', value: '1600.0' },
@@ -14,18 +15,20 @@ const marketInfo = [
 
 
 const Market = () => {
+   const theme = useContext(ThemeContext)
+
    return (
-      <div className="border rounded-lg bg-gray-300">
-         <div> Market Info.</div>
-         <div className="bg-gray-200">
-            <div>SET</div>
-            <div>SET50</div>
-            <div>HSK</div>
-            <div>Nikei</div>
-            <div>Dowjone</div>
-            <div>Nasdaq</div>
-            <div>S&P500</div>
-            <div>HSK</div>
+      <div className={`rounded-lg ${theme.market.labelBackgroundColor}`}>
+         <div className="py-1"> Market Info.</div>
+         <div className={`grid grid-cols-2 md:grid-cols-1 ${theme.market.backgroundColor}`}>
+            {  marketInfo.map((info) => 
+                  <div className={`grid grid-cols-3 py-1 px-3 text-sm ${theme.market.textColor}`}>
+                     <div className="text-left">{info.symbol}</div>
+                     <div>{info.value}</div>
+                  </div>
+               )
+            }
+
          </div>
       </div>
    )

@@ -49,7 +49,7 @@ const Body = () => {
             </div>
             <Carousel contents={contents} limit={carouselLimit} />
 
-            <div className="grid md:grid-cols-3 gap-2">
+            <div className="grid md:grid-cols-3 gap-4">
                <div className="md:col-span-2">
                   <List contents={contents} skip={carouselLimit} />
                </div>

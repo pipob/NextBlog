@@ -8,17 +8,22 @@ export const themes = {
        textColor: 'text-gray-700',
        borderColor: 'border-gray-600'
      },
+     body: {
+      backgroundColor: 'bg-gray-100', 
+      textColor: 'text-gray-900',
+     },     
      carousel: {
        backgroundColor: 'bg-white',
        textColor: 'text-black',
      },
-     body: {
-      backgroundColor: 'bg-gray-100', 
-      textColor: 'text-gray-900',
-     },
-     content: {
+     list: {
       backgroundColor: 'bg-gray-200', 
       textColor: 'text-black',
+     },
+     market: {
+      labelBackgroundColor: 'bg-gray-300', 
+      backgroundColor: 'bg-gray-200', 
+      textColor: 'text-black', 
      }
    }, 
    dark: { 
@@ -36,9 +41,14 @@ export const themes = {
        backgroundColor: 'bg-gray-800', 
        textColor: 'text-gray-100',
      },
-     content: {
+     list: {
       backgroundColor: 'bg-gray-900', 
       textColor: 'text-white',
+     },
+     market: {
+      labelBackgroundColor: 'bg-gray-700', 
+      backgroundColor: 'bg-gray-900', 
+      textColor: 'text-white', 
      }
    }
  }
