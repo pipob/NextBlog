@@ -64,6 +64,6 @@
 
 @media (min-width: 640px) {
   .truncate-m { 
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
   }
 }
