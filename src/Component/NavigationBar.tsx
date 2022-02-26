@@ -38,7 +38,7 @@ const NavigationBar = ({ handleSwitchTheme, setShowNewBlogModal }: { handleSwitc
                         <div className="material-icons text-sm">login</div> <div className="text-sm">SignIn</div> 
                      </button>
                }
-               <button className="material-icons text-sm" onClick={handleSwitchTheme}> {theme.navigator.icon} </button>                 
+               <button className="px-1 material-icons" onClick={handleSwitchTheme}> {theme.navigator.icon} </button>                 
             </div>
             
           

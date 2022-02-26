@@ -4,6 +4,7 @@ import ThemeContext from './Context'
 import Carousel from "./Carousel";
 import List from "./List";
 import Market from "./Market";
+import PaymentButton from "./Payment";
 import { AdsHorizontal, AdsSquare } from "./Ads";
 
 import Image_3 from "../Images/image_3.jpg"
@@ -74,20 +75,21 @@ const Body = () => {
 
 
    return (
-      <div className={`${theme.body.backgroundColor} ${theme.body.textColor} p-4`}>
-         <div className={`max-w-4xl mx-auto grid gap-4 `}>
+      <div className={`${theme.body.backgroundColor} ${theme.body.textColor} py-4 px-2 sm:px-4 `}>
+         <div className={`max-w-3xl mx-auto grid gap-4 `}>
             <div className={`flex justify-between`}>
                <div>Topic</div>
                <button className="material-icons">menu</button>
             </div>
             <Carousel contents={contents} limit={carouselLimit} />
-            <div className="grid md:grid-cols-3 gap-4">
-               <div className="md:col-span-2">
+            <div className="grid sm:grid-cols-3 gap-4">
+               <div className="sm:col-span-2">
                   {/* <AdsHorizontal /> */}
                   <List contents={contents} skip={carouselLimit} />
                </div>
-               <div className="md:col-span-1">
+               <div className="sm:col-span-1">
                   <Market />
+                  <PaymentButton />
                   <AdsSquare />
                </div>
             </div>

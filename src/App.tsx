@@ -30,7 +30,7 @@ function App() {
         <Body />
         
         
-        <Example message='Hello World 123' />
+        {/* <Example message='Hello World 123' /> */}
       </div>      
     </ThemeContext.Provider>
 
