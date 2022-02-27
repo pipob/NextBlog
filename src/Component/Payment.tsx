@@ -1,7 +1,6 @@
 import React from "react";
 import axios from 'axios';
 import jwt from 'jsonwebtoken';
-import { stringify } from "querystring";
 
 const privateKey = 'CD229682D3297390B9F66FF4020B758F4A5E625AF4992E5D75D311D6458B38E2'
 const PaymentButton = () => {
@@ -18,14 +17,16 @@ const PaymentButton = () => {
          "paymentChannel": ["CC"]
       }
       let payload = jwt.sign(value, privateKey)
-      let header: any = { "Content-Type": "application/json" }
-      let { data } = await axios.post('https://sandbox-pgw.2c2p.com/payment/4.1/PaymentToken', 
-         { payload }, header ) 
-      console.log(data);    
-      let { webPaymentUrl: string } = jwt.decode(data.payload)
-      console.log(res); 
-      window.location.href = String(res?.webPaymentUrl) ;
+      // let header: any = { "Content-Type": "application/json" }
+      // let { data } = await axios.post('https://sandbox-pgw.2c2p.com/payment/4.1/PaymentToken', 
+      //    { payload }, header ) 
+      // console.log(data);  
       
+
+      //let res = jwt.decode(data.payload)// as { webPaymentUrl: string; };
+      //console.log(res); 
+      //window.location.href = res?.webPaymentUrl;
+
    }
 
    return (
